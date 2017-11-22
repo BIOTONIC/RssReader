@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+             tools:context="ca.wlu.tianran.rssreader.news.NewsDetailFragment"
+             android:id="@+id/fragment_news_detail">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="150dp" app:srcCompat="@drawable/error_img"
+                android:id="@+id/image_view" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" app:layout_constraintRight_toRightOf="parent"
+                android:contentDescription="@string/img_desc"
+                android:scaleType="fitCenter" android:layout_marginTop="0dp"
+                android:layout_marginEnd="16dp"
+                tools:layout_constraintRight_creator="1" tools:layout_constraintLeft_creator="1"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginStart="16dp"/>
+
+        <GridLayout
+                android:layout_marginTop="0dp" app:layout_constraintTop_toBottomOf="@+id/image_view"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:columnCount="2"
+                android:layout_width="0dp" android:elevation="0dp"
+                android:layout_marginStart="16dp" android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:id="@+id/desc_text" android:text="@string/default_title"
+                    android:textSize="16sp" android:fontFamily="casual"
+                    tools:layout_editor_absoluteY="684dp" tools:layout_editor_absoluteX="876dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            <Button
+                    android:text="@string/more_btn"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content" android:id="@+id/more_btn"
+                    android:layout_columnSpan="2" style="@style/Widget.AppCompat.Button.Colored" android:textSize="20sp"
+                    android:layout_gravity="bottom|center_horizontal"/>
+        </GridLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
